@@ -19,10 +19,19 @@ You can see something like that (You can changes your IP on **localhost** and Po
     
 #### It means your virtual storage with your secret password is working 
  
- #### Editing script Storage.py:
+#### Editing script Storage.py:
 ```python
     UserName = 'YourUserName' # It is a **Dictionary key** to Value. I use my username for connect to DB
     Port = 4000 # You can choise any available port. If you edited Port value, don't forget to change in **Client.py**
+```
+### Connect file 'Client.py' to your script using:
+
+```python
+    from Client import SuperCacher
+    
+    cacher = SuperCacher()
+    
+    password = cacher.get(username) # Where 'username' is your dictionary key. return your password
 ```
 
 
